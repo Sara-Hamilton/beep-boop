@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is the Epicodus weekly project for week 2 of the Intro to Programming course.  It's purpose is to display understanding of arrays and looping in JavaScript._
+_This is the Epicodus weekly project for week 2 of the Intro to Programming course.  Its purpose is to display understanding of arrays and looping in JavaScript._
 
 _Beep Boop takes a number from a user and returns a range of numbers from 0 to the chosen number with the following exceptions:_
 * Numbers that contain a 0 are replaced (all digits) with "Beep!"
