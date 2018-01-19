@@ -15,6 +15,8 @@ var beepBoop = function(rangeValue) {
 }
 
 $(document).ready(function() {
+  $(":reset");
+
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
 
@@ -37,15 +39,17 @@ $(document).ready(function() {
       $("#result ul").append("<li>" + result + "</li>");
       });
 
-      $("#reverse").click(function(event) {
-        event.preventDefault();
-        console.log(results);
-        $("#result ul").empty();
-        results.reverse();
-        results.forEach(function(result) {
-        $("#result ul").append("<li>" + result + "</li>");
-        });
-      });
+  $("#reverse").click(function(event) {
+    $("#result ul").empty();
+    results.reverse();
+    results.forEach(function(result) {
+    $("#result ul").append("<li>" + result + "</li>");
+    });
+  });
+
+  $("#reset").click(function(result){
+    $("#result ul").empty();
+  });
 
   });
 });
