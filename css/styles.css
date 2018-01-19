@@ -1,5 +1,11 @@
 .jumbotron {
   text-align: center;
+  background-color: #dba759;
+  color: white;
+}
+
+body {
+  color: gray;
 }
 
 .btn {
