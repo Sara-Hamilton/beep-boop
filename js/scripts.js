@@ -1,7 +1,11 @@
 var beepBoop = function(rangeValue) {
   var numbers = [];
   for (var index = 1; index <= rangeValue; index += 1) {
-    numbers.push(index);
+    if (index % 10 === 0) {
+      numbers.push("Beep!");
+    } else {
+      numbers.push(index);
+    }
   }
   return numbers;
 }
