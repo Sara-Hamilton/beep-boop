@@ -13,7 +13,7 @@
         <h1>Beep Boop</h1>
         <p>Turn numbers into beeps and boops</p>
         <img class="intro-img" src="img/beep-boop.jpeg" alt="picture of robot with text saying BEEP BOOP means I love you on ROBOT">
-        <img class="result-img" src="img/sorry.png" alt="A picture with text saying I'm sorry Dave, I'm afraid I can't do that.">
+        <img class="result-img" id="sorry-img" src="img/sorry.png" alt="A picture with text saying I'm sorry Dave, I'm afraid I can't do that.">
       </div>
 
       <form id="beepBoopForm">
@@ -26,21 +26,21 @@
           <input id="rangeValue" type="number" min="1" max="500">
         </div>
         <button type="submit" id="submitData" class="btn btn-info">Submit</button>
-        <button type="button" id="reverse" class="btn btn-info">Reverse Results</button>
-        <button type="reset" id="reset" class="btn btn-info">Reset Form</button>
+        <button type="button" id="reverse" class="btn btn-info hidden-btn">Reverse Results</button>
+        <button type="reset" id="reset" class="btn btn-info hidden-btn">Reset Form</button>
       </form>
 
       <div id="result">
         <div class="row">
           <div class="col-md-4">
-            <img class="result-img" src="img/beep.jpeg" alt="picture of the Roadrunner">
+            <img class="result-img" id="beep-img" src="img/beep.jpeg" alt="picture of the Roadrunner">
           </div>
           <div class="col-md-4">
             <ul>
             </ul>
           </div>
           <div class="col-md-4">
-            <img class="result-img" src="img/boop.png" alt="picture of Betty Boop">
+            <img class="result-img" id="boop-img" src="img/boop.png" alt="picture of Betty Boop">
           </div>
         </div>
       </div>

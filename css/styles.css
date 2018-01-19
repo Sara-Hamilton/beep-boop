@@ -16,6 +16,6 @@ img {
   margin-top: 3rem;
 }
 
-#reverse, #reset, .result-img {
+.hidden-btn, .result-img {
   display: none;
 }

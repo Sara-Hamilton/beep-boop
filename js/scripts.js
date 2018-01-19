@@ -29,11 +29,18 @@ $(document).ready(function() {
       alert("Please enter a name.");
     } else if (!rangeValue) {
       alert("Please enter a number.");
-    } else {
+    } else if (rangeValue >= 20){
       $(".intro-img").hide();
-      $("#reverse").show();
-      $("#reset").show();
+      $(".hidden-btn").show();
       $(".result-img").show();
+    } else if (rangeValue >= 3) {
+      $(".intro-img").hide();
+      $(".hidden-btn").show();
+      $("#boop-img").show();
+      $("#sorry-img").show();
+    } else {
+      $(".hidden-btn").show();
+      $("#boop-img").show();
     }
 
 
@@ -42,7 +49,7 @@ $(document).ready(function() {
         results.splice(resultIndex, 1, "I'm sorry, " + name + ". I'm afraid I can't do that.");
       }
       resultIndex += 1;
-      });
+    });
 
     results.forEach(function(result) {
       $("#result ul").append("<li>" + result + "</li>");
