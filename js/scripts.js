@@ -1,7 +1,9 @@
 var beepBoop = function(rangeValue) {
   var numbers = [];
   for (var index = 1; index <= rangeValue; index += 1) {
-    if (index.toString().includes("1")) {
+    if (index.toString().includes("3")) {
+      numbers.push("I'm sorry, Dave. I'm afraid I can't do that.")
+    } else if (index.toString().includes("1")) {
       numbers.push("Boop!")
     } else if (index % 10 === 0) {
       numbers.push("Beep!");
