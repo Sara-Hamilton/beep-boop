@@ -1,6 +1,6 @@
 # Beep Boop
 
-#### a program that displays a range of numbers and replaces some numbers with text based on various criteria, 1-19-18
+#### web app that displays a range of numbers and replaces some numbers with text based on various criteria, 1-19-18
 
 #### _By Sara Hamilton_
 
@@ -16,16 +16,16 @@ _Beep Boop takes a number from a user and returns a range of numbers from 0 to t
 ### Specifications
 
 * Numbers that contain a 0 are replaced (all digits) with "Beep!"
- * Input Example: 0
- * Output Example: "Beep!"
+  * Input Example: 0
+  * Output Example: "Beep!"
 
 * Numbers that contain a 1 are replaced (all digits) with "Boop!"
- * Input Example: 11
- * Output Example: "Boop!"
+  * Input Example: 11
+  * Output Example: "Boop!"
 
 * Numbers divisible by 3 are replaced with "I'm sorry, Dave. I'm afraid I can't do that."
- * Input Example: 13
- * Output Example: "I'm sorry, Dave. I'm afraid I can't do that."
+  * Input Example: 13
+  * Output Example: "I'm sorry, Dave. I'm afraid I can't do that."
 
 
 
