@@ -10,7 +10,7 @@ var beepBoop = function(rangeValue) {
     } else {
       resultsArray.push(index);
     }
-  }
+  };
   return resultsArray;
 }
 
@@ -35,6 +35,17 @@ $(document).ready(function() {
         result = result;
       }
       $("#result ul").append("<li>" + result + "</li>");
-    });
+      });
+
+      $("#reverse").click(function(event) {
+        event.preventDefault();
+        console.log(results);
+        $("#result ul").empty();
+        results.reverse();
+        results.forEach(function(result) {
+        $("#result ul").append("<li>" + result + "</li>");
+        });
+      });
+
   });
 });
