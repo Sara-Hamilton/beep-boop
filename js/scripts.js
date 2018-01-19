@@ -23,6 +23,7 @@ $(document).ready(function() {
     var name = $("input#name").val();
     var rangeValue = parseInt($("input#rangeValue").val());
     var results = beepBoop(rangeValue);
+    var resultIndex = 0;
 
     if (!name) {
       alert("Please enter a name.");
@@ -33,14 +34,17 @@ $(document).ready(function() {
       $("#reset").show();
     }
 
+
     results.forEach(function(result) {
       if (result === ("sorry")) {
-        result = ("I'm sorry, " + name + ". I'm afraid I can't do that.")
-      } else {
-        result = result;
+        results.splice(resultIndex, 1, "I'm sorry, " + name + ". I'm afraid I can't do that.");
       }
-      $("#result ul").append("<li>" + result + "</li>");
+      resultIndex += 1;
       });
+
+    results.forEach(function(result) {
+      $("#result ul").append("<li>" + result + "</li>");
+    });
 
   $("#reverse").click(function(event) {
     $("#result ul").empty();
