@@ -1,5 +1,9 @@
 var beepBoop = function(rangeValue) {
-  return false;
+  var numbers = [];
+  for (var index = 1; index <= rangeValue; index += 1) {
+    numbers.push(index);
+  }
+  return numbers;
 }
 
 $(document).ready(function() {
