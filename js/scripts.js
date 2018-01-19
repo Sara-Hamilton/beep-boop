@@ -28,6 +28,9 @@ $(document).ready(function() {
       alert("Please enter a name.");
     } else if (!rangeValue) {
       alert("Please enter a number.");
+    } else {
+      $("#reverse").show();
+      $("#reset").show();
     }
 
     results.forEach(function(result) {
@@ -49,6 +52,8 @@ $(document).ready(function() {
 
   $("#reset").click(function(result){
     $("#result ul").empty();
+    $("#reverse").hide();
+    $("#reset").hide();
   });
 
   });

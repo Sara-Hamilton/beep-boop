@@ -1,3 +1,7 @@
 .jumbotron {
   text-align: center;
 }
+
+#reverse, #reset {
+  display: none;
+}
