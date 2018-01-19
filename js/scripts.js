@@ -1,18 +1,17 @@
 var beepBoop = function(rangeValue) {
-  var numbers = [];
+  var resultsArray = [];
   for (var index = 1; index <= rangeValue; index += 1) {
     if (index.toString().includes("3")) {
-      numbers.push("sorry")
+      resultsArray.push("sorry")
     } else if (index.toString().includes("1")) {
-      numbers.push("Boop!")
+      resultsArray.push("Boop!")
     } else if (index % 10 === 0) {
-      numbers.push("Beep!");
+      resultsArray.push("Beep!");
     } else {
-      numbers.push(index);
+      resultsArray.push(index);
     }
   }
-  console.log("name = " + name);
-  return numbers;
+  return resultsArray;
 }
 
 $(document).ready(function() {
@@ -24,13 +23,12 @@ $(document).ready(function() {
     var results = beepBoop(rangeValue);
 
     if (!name) {
-      name = prompt("Please enter a name.");
+      alert("Please enter a name.");
     } else if (!rangeValue) {
-      rangeValue = prompt("Please enter a number.");
+      alert("Please enter a number.");
     }
 
     results.forEach(function(result) {
-      console.log(result);
       if (result === ("sorry")) {
         result = ("I'm sorry, " + name + ". I'm afraid I can't do that.")
       } else {
