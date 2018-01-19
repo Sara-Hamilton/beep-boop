@@ -19,8 +19,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     var rangeValue = parseInt($("input#rangeValue").val());
-    var result = beepBoop(rangeValue);
+    var results = beepBoop(rangeValue);
 
-    $("#result").text(result);
+    results.forEach(function(result) {
+      $("#result ul").append("<li>" + result + "</li>");
+    });
   });
 });
