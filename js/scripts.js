@@ -30,8 +30,10 @@ $(document).ready(function() {
     } else if (!rangeValue) {
       alert("Please enter a number.");
     } else {
+      $(".intro-img").hide();
       $("#reverse").show();
       $("#reset").show();
+      $(".result-img").show();
     }
 
 
@@ -58,6 +60,8 @@ $(document).ready(function() {
     $("#result ul").empty();
     $("#reverse").hide();
     $("#reset").hide();
+    $(".result-img").hide();
+    $(".intro-img").show();
   });
 
   });

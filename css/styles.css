@@ -2,6 +2,14 @@
   text-align: center;
 }
 
-#reverse, #reset {
+.btn {
+  margin-bottom: 5rem;
+}
+
+img {
+  margin-top: 3rem;
+}
+
+#reverse, #reset, .result-img {
   display: none;
 }
