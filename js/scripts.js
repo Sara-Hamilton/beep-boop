@@ -20,6 +20,7 @@ beepBoop = function(rangeValue, name) {
 $(document).ready(function() {
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
+    $("#submitData").hide();
 
     name = $("input#name").val();
     rangeValue = parseInt($("input#rangeValue").val());
@@ -62,6 +63,7 @@ $(document).ready(function() {
     $("#reset").hide();
     $(".result-img").hide();
     $(".intro-img").show();
+    $("#submitData").show();
   });
 
   });
