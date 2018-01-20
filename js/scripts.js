@@ -48,7 +48,8 @@ $(document).ready(function() {
       $("#result ul").append("<li>" + result + "</li>");
     });
 
-  $("#reverse").click(function(event) {
+  $("#reverse").unbind("click").click(function(event) {
+    console.log(results);
     $("#result ul").empty();
     results.reverse();
     results.forEach(function(result) {
