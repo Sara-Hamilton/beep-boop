@@ -1,5 +1,6 @@
 var name = "";
 var rangeValue = 0;
+
 var results = [];
 
 beepBoop = function(rangeValue, name) {
@@ -13,9 +14,9 @@ beepBoop = function(rangeValue, name) {
     } else {
       results.push(index);
     }
-  };
+  }
   return results;
-}
+};
 
 $(document).ready(function() {
   $("#beepBoopForm").submit(function(event) {
