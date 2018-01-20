@@ -5,7 +5,7 @@ var beepBoop = function(rangeValue) {
       resultsArray.push("sorry")
     } else if (index.toString().includes("1")) {
       resultsArray.push("Boop!")
-    } else if (index % 10 === 0) {
+    } else if (index.toString().includes("0")) {
       resultsArray.push("Beep!");
     } else {
       resultsArray.push(index);
