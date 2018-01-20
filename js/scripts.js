@@ -56,6 +56,7 @@ $(document).ready(function() {
   });
 
   $("#reset").click(function(){
+    results = [];
     $("#result ul").empty();
     $("#reverse").hide();
     $("#reset").hide();
