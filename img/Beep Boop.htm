@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///Users/Guest/Desktop/beep-boop/index.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link href="./Beep Boop_files/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./Beep Boop_files/styles.css" rel="stylesheet" type="text/css">
+    <script src="file://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./Beep Boop_files/jquery-3.2.1.js"></script>
+    <script src="./Beep Boop_files/scripts.js"></script>
+    <title>Beep Boop</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Beep Boop</h1>
+        <p>Turn numbers into beeps and boops</p>
+        <img class="intro-img" src="./Beep Boop_files/beep-boop.jpeg" alt="picture of robot with text saying BEEP BOOP means I love you on ROBOT" style="display: none;">
+        <img class="result-img" id="sorry-img" src="./Beep Boop_files/sorry.png" alt="A picture with text saying I&#39;m sorry Dave, I&#39;m afraid I can&#39;t do that." style="display: inline;">
+      </div>
+
+      <form id="beepBoopForm" class="form-inline">
+        <div class="form-group input-group">
+          <label for="name">Enter your name:</label>
+          <input id="name" class="form-control" type="text">
+        </div>
+        <div class="form-group input-group">
+          <label for="rangeValue">Enter a number between 1 and 500:</label>
+          <input id="rangeValue" class="form-control" type="number" min="1" max="500">
+        </div>
+        <button type="submit" id="submitData" class="btn btn-info">Submit</button>
+        <button type="button" id="reverse" class="btn btn-info hidden-btn" style="display: inline-block;">Reverse Results</button>
+        <button type="reset" id="reset" class="btn btn-info hidden-btn" style="display: inline-block;">Reset Form</button>
+      </form>
+
+      <div id="result">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="result-img" id="beep-img" src="./Beep Boop_files/beep.jpeg" alt="picture of the Roadrunner" style="display: inline;">
+          </div>
+          <div class="col-md-4">
+            <ul>
+            <li>Boop!</li><li>2</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>Boop!</li><li>Boop!</li><li>Boop!</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>Boop!</li><li>Boop!</li><li>Boop!</li><li>Boop!</li><li>Boop!</li><li>Boop!</li><li>Beep!</li><li>Boop!</li><li>22</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>Beep!</li><li>Boop!</li><li>42</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>44</li><li>45</li><li>46</li><li>47</li><li>48</li><li>49</li><li>Beep!</li><li>Boop!</li><li>52</li><li>I'm sorry, sara. I'm afraid I can't do that.</li><li>54</li><li>55</li></ul>
+          </div>
+          <div class="col-md-4">
+            <img class="result-img" id="boop-img" src="./Beep Boop_files/boop.png" alt="picture of Betty Boop" style="display: inline;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+
+</body></html>
