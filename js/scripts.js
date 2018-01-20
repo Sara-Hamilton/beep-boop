@@ -1,27 +1,29 @@
-var beepBoop = function(rangeValue, name) {
-  var resultsArray = [];
+var name = "";
+var rangeValue = 0;
+var results = [];
+
+beepBoop = function(rangeValue, name) {
   for (var index = 1; index <= rangeValue; index += 1) {
     if (index.toString().includes("3")) {
-      resultsArray.push("I'm sorry, " + name + ". I'm afraid I can't do that.")
+      results.push("I'm sorry, " + name + ". I'm afraid I can't do that.")
     } else if (index.toString().includes("1")) {
-      resultsArray.push("Boop!")
+      results.push("Boop!")
     } else if (index.toString().includes("0")) {
-      resultsArray.push("Beep!");
+      results.push("Beep!");
     } else {
-      resultsArray.push(index);
+      results.push(index);
     }
   };
-  return resultsArray;
+  return results;
 }
 
 $(document).ready(function() {
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
 
-    var name = $("input#name").val();
-    var rangeValue = parseInt($("input#rangeValue").val());
-    var results = beepBoop(rangeValue, name);
-    var resultIndex = 0;
+    name = $("input#name").val();
+    rangeValue = parseInt($("input#rangeValue").val());
+    results = beepBoop(rangeValue, name);
 
     if (!name) {
       alert("Please enter a name.");
