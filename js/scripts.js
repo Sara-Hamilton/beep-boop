@@ -15,8 +15,6 @@ var beepBoop = function(rangeValue) {
 }
 
 $(document).ready(function() {
-  $(":reset");
-
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
 
@@ -43,7 +41,6 @@ $(document).ready(function() {
       $("#boop-img").show();
     }
 
-
     results.forEach(function(result) {
       if (result === ("sorry")) {
         results.splice(resultIndex, 1, "I'm sorry, " + name + ". I'm afraid I can't do that.");
@@ -59,11 +56,11 @@ $(document).ready(function() {
     $("#result ul").empty();
     results.reverse();
     results.forEach(function(result) {
-    $("#result ul").append("<li>" + result + "</li>");
+      $("#result ul").append("<li>" + result + "</li>");
     });
   });
 
-  $("#reset").click(function(result){
+  $("#reset").click(function(){
     $("#result ul").empty();
     $("#reverse").hide();
     $("#reset").hide();
