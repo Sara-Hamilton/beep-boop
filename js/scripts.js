@@ -50,7 +50,6 @@ $(document).ready(function() {
     });
 
   $("#reverse").unbind("click").click(function(event) {
-    console.log(results);
     $("#result ul").empty();
     results.reverse();
     results.forEach(function(result) {
