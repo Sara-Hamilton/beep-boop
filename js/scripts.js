@@ -1,8 +1,3 @@
-var name = "";
-var rangeValue = 0;
-
-var results = [];
-
 beepBoop = function(rangeValue, name) {
   for (var index = 1; index <= rangeValue; index += 1) {
     if (index.toString().includes("3")) {
@@ -23,9 +18,9 @@ $(document).ready(function() {
     event.preventDefault();
     $("#submitData").hide();
 
-    name = $("input#name").val();
-    rangeValue = parseInt($("input#rangeValue").val());
-    results = beepBoop(rangeValue, name);
+    var name = $("input#name").val();
+    var rangeValue = parseInt($("input#rangeValue").val());
+    var results = beepBoop(rangeValue, name);
 
     if (!name) {
       alert("Please enter a name.");
