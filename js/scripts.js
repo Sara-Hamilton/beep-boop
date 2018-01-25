@@ -1,6 +1,10 @@
+var name = "";
+var rangeValue = 0;
+var results = [];
+
 beepBoop = function(rangeValue, name) {
   for (var index = 1; index <= rangeValue; index += 1) {
-    if (index.toString().includes("3")) {
+    if (index % 3 === 0) {
       results.push("I'm sorry, " + name + ". I'm afraid I can't do that.")
     } else if (index.toString().includes("1")) {
       results.push("Boop!")
@@ -18,9 +22,9 @@ $(document).ready(function() {
     event.preventDefault();
     $("#submitData").hide();
 
-    var name = $("input#name").val();
-    var rangeValue = parseInt($("input#rangeValue").val());
-    var results = beepBoop(rangeValue, name);
+    name = $("input#name").val();
+    rangeValue = parseInt($("input#rangeValue").val());
+    results = beepBoop(rangeValue, name);
 
     if (!name) {
       alert("Please enter a name.");
