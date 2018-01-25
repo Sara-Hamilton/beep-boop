@@ -1,8 +1,5 @@
-var name = "";
-var rangeValue = 0;
-var results = [];
-
 beepBoop = function(rangeValue, name) {
+var results = [];
   for (var index = 1; index <= rangeValue; index += 1) {
     if (index % 3 === 0) {
       results.push("I'm sorry, " + name + ". I'm afraid I can't do that.")
@@ -17,32 +14,63 @@ beepBoop = function(rangeValue, name) {
   return results;
 };
 
+verifyInput = function(name, rangeValue) {
+  if (!name) {
+    alert("Please enter a name.");
+    console.log(verifyInput === true)
+    return false
+  } else if (!rangeValue) {
+    alert("Please enter a number.");
+    return false
+  } else {
+    return true;
+  }
+}
+
+displayImages = function(name, rangeValue) {
+  // if (!name) {
+  //   alert("Please enter a name.");
+  // } else if (!rangeValue) {
+  //   alert("Please enter a number.");
+  if (rangeValue >= 20) {
+    $(".intro-img").hide();
+    $(".hidden-btn").show();
+    $(".result-img").show();
+  } else if (rangeValue >= 3) {
+    $(".intro-img").hide();
+    $(".hidden-btn").show();
+    $("#boop-img").show();
+    $("#sorry-img").show();
+  } else if (verifyInput === true) {
+    $(".hidden-btn").show();
+    $("#boop-img").show();
+  }
+}
+
+resetForm = function() {
+  results = [];
+  $("#result ul").empty();
+  $("#reverse").hide();
+  $("#reset").hide();
+  $(".result-img").hide();
+  $(".intro-img").show();
+  $("#submitData").show();
+}
+
 $(document).ready(function() {
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
     $("#submitData").hide();
 
-    name = $("input#name").val();
-    rangeValue = parseInt($("input#rangeValue").val());
-    results = beepBoop(rangeValue, name);
+    var name = $("input#name").val();
+    var rangeValue = parseInt($("input#rangeValue").val());
+    var results = beepBoop(rangeValue, name);
 
-    if (!name) {
-      alert("Please enter a name.");
-    } else if (!rangeValue) {
-      alert("Please enter a number.");
-    } else if (rangeValue >= 20){
-      $(".intro-img").hide();
-      $(".hidden-btn").show();
-      $(".result-img").show();
-    } else if (rangeValue >= 3) {
-      $(".intro-img").hide();
-      $(".hidden-btn").show();
-      $("#boop-img").show();
-      $("#sorry-img").show();
-    } else {
-      $(".hidden-btn").show();
-      $("#boop-img").show();
+    verifyInput(name, rangeValue);
+    if (verifyInput === true) {
+      displayImages(name, rangeValue);
     }
+    // displayImages(name, rangeValue);
 
     results.forEach(function(result) {
       $("#result ul").append("<li>" + result + "</li>");
@@ -57,13 +85,7 @@ $(document).ready(function() {
   });
 
   $("#reset").click(function(){
-    results = [];
-    $("#result ul").empty();
-    $("#reverse").hide();
-    $("#reset").hide();
-    $(".result-img").hide();
-    $(".intro-img").show();
-    $("#submitData").show();
+    resetForm();
   });
 
   });
