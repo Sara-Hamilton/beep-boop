@@ -12,7 +12,7 @@ var results = [];
     }
   }
   return results;
-};
+}
 
 verifyInput = function(name, rangeValue) {
   if (!name) {
@@ -28,23 +28,36 @@ verifyInput = function(name, rangeValue) {
 }
 
 displayImages = function(name, rangeValue) {
-  // if (!name) {
-  //   alert("Please enter a name.");
-  // } else if (!rangeValue) {
-  //   alert("Please enter a number.");
   if (rangeValue >= 20) {
     $(".intro-img").hide();
+    $("#submitData").hide();
     $(".hidden-btn").show();
     $(".result-img").show();
   } else if (rangeValue >= 3) {
     $(".intro-img").hide();
+    $("#submitData").hide();
     $(".hidden-btn").show();
     $("#boop-img").show();
     $("#sorry-img").show();
-  } else if (verifyInput === true) {
+  } else if (verifyInput(name, rangeValue) === true) {
+    $("#submitData").hide();
     $(".hidden-btn").show();
     $("#boop-img").show();
   }
+}
+
+populateList = function(results) {
+  results.forEach(function(result) {
+    $("#result ul").append("<li>" + result + "</li>");
+  });
+}
+
+reverseList = function(results) {
+  $("#result ul").empty();
+  results.reverse();
+  results.forEach(function(result) {
+    $("#result ul").append("<li>" + result + "</li>");
+  });
 }
 
 resetForm = function() {
@@ -60,28 +73,19 @@ resetForm = function() {
 $(document).ready(function() {
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
-    $("#submitData").hide();
 
     var name = $("input#name").val();
     var rangeValue = parseInt($("input#rangeValue").val());
     var results = beepBoop(rangeValue, name);
 
-    verifyInput(name, rangeValue);
-    if (verifyInput === true) {
+    if (verifyInput(name, rangeValue) === true) {
       displayImages(name, rangeValue);
     }
-    // displayImages(name, rangeValue);
 
-    results.forEach(function(result) {
-      $("#result ul").append("<li>" + result + "</li>");
-    });
+    populateList(results);
 
   $("#reverse").unbind("click").click(function(event) {
-    $("#result ul").empty();
-    results.reverse();
-    results.forEach(function(result) {
-      $("#result ul").append("<li>" + result + "</li>");
-    });
+    reverseList(results);
   });
 
   $("#reset").click(function(){
