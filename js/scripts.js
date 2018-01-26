@@ -17,7 +17,6 @@ var results = [];
 verifyInput = function(name, rangeValue) {
   if (!name) {
     alert("Please enter a name.");
-    console.log(verifyInput === true)
     return false
   } else if (!rangeValue) {
     alert("Please enter a number.");

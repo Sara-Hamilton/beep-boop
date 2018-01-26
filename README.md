@@ -16,18 +16,47 @@ _Beep Boop takes a number from a user and returns a range of numbers from 0 to t
 ### Specifications
 
 * Numbers that contain a 0 are replaced (all digits) with "Beep!"
-  * Input Example: 0
-  * Output Example: "Beep!"
+  * Example Number: 20
+  * Replaced With: "Beep!"
 
 * Numbers that contain a 1 are replaced (all digits) with "Boop!"
-  * Input Example: 11
-  * Output Example: "Boop!"
+  * Example Number: 11
+  * Replaced With: "Boop!"
 
 * Numbers divisible by 3 are replaced with "I'm sorry, Dave. I'm afraid I can't do that."
-  * Input Example: 13
-  * Output Example: "I'm sorry, Dave. I'm afraid I can't do that."
+  * Example Number: 12
+  * Replaced With: "I'm sorry, Dave. I'm afraid I can't do that."
+
+* Numbers that meet more than one specification are prioritized in reverse order of their listing.
+    * Example Number: 10
+    * Replaced With: "Boop!" ( and not "Beep!" )
+
+    * Example Number: 12
+    * Replaced With: "I'm sorry, Dave. I'm afraid I can't do that." ( and not "Boop!" )
 
 
+* Output is an array with all specified numbers replaced.  
+    * Input Example: 20
+    * Output Example: "Boop!"
+                                  2
+                                  "I'm sorry, Dave. I'm afraid I can't do that."
+                                  4
+                                  5
+                                  "I'm sorry, Dave. I'm afraid I can't do that."
+                                  7
+                                  8
+                                  "I'm sorry, Dave. I'm afraid I can't do that."
+                                  "Boop!"
+                                  "Boop!"
+                                  "I'm sorry, Dave. I'm afraid I can't do that."
+                                  "Boop!"
+                                  "Boop!"
+                                  "I'm sorry, Dave. I'm afraid I can't do that."
+                                  "Boop!"
+                                  "Boop!"
+                                  "I'm sorry, Dave. I'm afraid I can't do that."
+                                  "Boop!"
+                                  "Beep!"
 
 ## Setup/Installation Requirements
 
